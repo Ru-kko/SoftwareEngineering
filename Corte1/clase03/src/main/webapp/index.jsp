@@ -1,15 +1,26 @@
-<%@page import="java.util.Date" %>
-<!doctype html>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Test Form</title>
 </head>
 <body>
-    <h1>test title</h1>
-    <p>hello</p>
+    <h1>Client Data</h1>
+    <form action="svUsers" method="post">
+        <p>
+            <label for="inp_id">Id</label>
+            <input name="id" type="number" id="inp_id">
+        </p>
+        <p>
+            <label for="inp_name">Fisrt Name</label>
+            <input name="firstName" type="text" id="inp_name">
+        </p>
+        <p>
+            <label for="inp_last_name">Last Name</label>
+            <input name="lastName" type="text" id="inp_last_name" name>
+        </p>
+        <p><button type="submit">Send</button></p>
+    </form>
+    <h2><a href="svUsers">Show User List</a></h2>
 </body>
 </html>
