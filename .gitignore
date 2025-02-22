@@ -1,1 +1,8 @@
 *.pdf
+**/.idea
+**/.gradle
+Corte*/**/build
+Corte*/**/gradlew
+Corte*/**/gradlew.bat
+.DS_Store
+
