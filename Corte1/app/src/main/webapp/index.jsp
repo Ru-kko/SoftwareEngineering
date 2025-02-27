@@ -1,10 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/styles.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Test Form</title>
 </head>
 <body>
+<main>
     <h1>Client Data</h1>
     <form action="svUsers" method="post">
         <p>
@@ -22,5 +24,5 @@
         <p><button type="submit">Send</button></p>
     </form>
     <h2><a href="svUsers">Show User List</a></h2>
+</main>
 </body>
-</html>
