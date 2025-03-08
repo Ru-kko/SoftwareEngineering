@@ -6,11 +6,13 @@ services:
       - POSTGRES_USER=pg
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=app
+    ports:
+      - 5432:5432
   tomcat:
     image: tomcat
     ports:
       - 8080:8080
       - 5005:5005
     volumes:
-      - ./Corte1/demo/target/demo-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war
-      # - ./cnf:/usr/local/tomcat/cofy10k
+      - ./Corte1/app/target/demo-1.0-SNAPSHOT.war:/usr/local/tomcat/webapps/ROOT.war
+      - ./conf/context.xml:/usr/local/tomcat/conf/context.xml
