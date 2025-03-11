@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+
+    <TableLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:background="@color/white">
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/net_ingress"
+                android:textColor="@color/black"
+                android:labelFor="@id/inp_net_ingress"
+                android:text="Ingresos Mensuales"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:textSize="22sp"
+                android:width="150dp"
+                android:layout_marginEnd="5dp"
+                />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/inp_net_ingress"
+                android:labelFor="@id/key_icn"
+                android:inputType="numberDecimal"
+                android:autofillHints="password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textFontWeight="800"
+                style="@style/Input.Rounded"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/net_egress"
+                android:textColor="@color/black"
+                android:labelFor="@id/inp_net_ingress"
+                android:text="Gastos Mensuales"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:textSize="22sp"
+                android:width="150dp"
+                android:layout_marginEnd="5dp"
+                />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/inp_net_egress"
+                android:labelFor="@id/key_icn"
+                android:inputType="numberDecimal"
+                android:autofillHints="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textFontWeight="800"
+                style="@style/Input.Rounded"
+                />
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/net_actual_deb"
+                android:textColor="@color/black"
+                android:labelFor="@id/inp_actual_deb"
+                android:text="Deudas Actuales"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:textSize="22sp"
+                android:width="150dp"
+                android:layout_marginEnd="5dp"
+                />
+            <EditText
+                android:textColor="@color/black"
+                android:id="@+id/inp_actual_deb"
+                android:labelFor="@id/key_icn"
+                android:inputType="number"
+                android:autofillHints="number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textFontWeight="800"
+                style="@style/Input.Rounded"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/net_credit_time"
+                android:textColor="@color/black"
+                android:labelFor="@id/inp_credit_time"
+                android:text="Plazo"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:textSize="22sp"
+                android:width="150dp"
+                android:layout_marginEnd="5dp"
+                />
+            <EditText
+                android:autofillHints=""
+                android:textColor="@color/black"
+                android:id="@+id/inp_credit_time"
+                android:labelFor="@id/key_icn"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:textSize="20sp"
+                android:fontFamily="serif"
+                android:textFontWeight="800"
+                style="@style/Input.Rounded"
+                />
+        </TableRow>
+    </TableLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginVertical="20dp"
+        android:id="@+id/credit_btn"
+        style="@style/Button.Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="serif"
+        android:text="Calcular Capacidad"
+        android:textColor="@color/orange"
+        android:textSize="20sp"/>
+
+
+    <TableLayout
+        android:id="@+id/res_view"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:stretchColumns="1"
+        >
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:text="Capacidad de Endeudamiento:"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/deb_capacity_res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="500"
+                android:text="Pago Mensual"
+                android:textColor="@color/black" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:text="Monto Maximo:"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/max_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="500"
+                android:text="Pago Mensual"
+                android:textColor="@color/black" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="900"
+                android:text="Pago Mensual:"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/res_month_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textFontWeight="500"
+                android:text="Pago Mensual"
+                android:textColor="@color/black" />
+
+        </TableRow>
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="invisible"
+        android:layout_marginVertical="20dp"
+        android:id="@+id/save_btn"
+        style="@style/Button.Orange"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="serif"
+        android:text="Guardar"
+        android:textColor="@color/orange" />
+</androidx.appcompat.widget.LinearLayoutCompat>
