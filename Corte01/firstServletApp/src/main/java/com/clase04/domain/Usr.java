@@ -29,5 +29,4 @@ public class Usr implements Serializable {
 
     @Column(name = "email")
     private String email;
-
 }
