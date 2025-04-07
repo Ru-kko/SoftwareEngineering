@@ -10,16 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dentalia.domain.User;
-import com.dentalia.dto.UserDto;
+import com.dentalia.domain.persistense.User;
+import com.dentalia.dao.UserRepository;
 
+import com.dentalia.domain.util.ErrorPopup;
 import lombok.SneakyThrows;
 import lombok.extern.java.Log;
 
 @Log
 @WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
-    private final UserDto userDto = UserDto.getInstance();
+    private final UserRepository userDto = UserRepository.getInstance();
 
     @Override
     @SneakyThrows
@@ -31,13 +32,13 @@ public class LoginController extends HttpServlet {
         Optional<User> user = userDto.findByEmail(email);
 
         if (user.isEmpty()) {
-            session.setAttribute("error", "Invalid email or password");
+            session.setAttribute("error", ErrorPopup.builder().message("Invalid email.").level(ErrorPopup.Level.WARNING).build());
             res.sendRedirect(req.getContextPath() + "/");
             return;
         }
 
         if (!user.get().getPassword().equals(password)) {
-            session.setAttribute("error", "Invalid password");
+            session.setAttribute("error", ErrorPopup.builder().message("Invalid password.").level(ErrorPopup.Level.WARNING).build());
             res.sendRedirect(req.getContextPath() + "/");
             return;
         }

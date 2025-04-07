@@ -19,6 +19,7 @@
     </div>
 </div>
 <% } else { %>
+<%@include file="./partials/popup.jsp"%>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand ps-3" href="index.jsp">Dentalia</a>
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
@@ -44,11 +45,6 @@
                             </div>
                             <button type="submit" class="btn btn-success w-100">LogIn</button>
                         </form>
-                        <div class="mt-3 text-center">
-                            <span class="text-muted">- or -</span>
-                            <br>
-                            <a href="signup.jsp" class="btn btn-link">SignUp</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -64,6 +60,5 @@
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
         crossorigin="anonymous"></script>
-<script src="js/datatables-simple-demo.js"></script>
 </body>
 </html>

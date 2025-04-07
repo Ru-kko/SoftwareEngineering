@@ -1,9 +1,8 @@
-package com.dentalia.domain;
+package com.dentalia.domain.persistense;
 
 import java.util.UUID;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +18,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class User {
     @Id
-    public UUID id;
+    private UUID id;
     private String name;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public enum Role {DENTIST, ADMIN}
 }

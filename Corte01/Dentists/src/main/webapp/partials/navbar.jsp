@@ -1,6 +1,12 @@
+<%
+    if (request.getSession().getAttribute("user") == null) {
+        response.sendRedirect("index.jsp");
+    }
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand ps-3" href="index.jsp">Dentalia</a>
+    <a class="navbar-brand ps-3" href="${pageContext.request.contextPath}/index.jsp">Dentalia</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
         <div class="input-group">
