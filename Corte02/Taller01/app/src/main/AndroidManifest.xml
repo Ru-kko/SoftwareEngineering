@@ -21,12 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".activities.LogIn" />
         <activity android:name=".activities.Register" />
         <activity android:name=".activities.PasswordRecovery" />
-        <activity android:name=".activities.Account" />
-        <activity android:name=".activities.CreditCapacity" />
+        <activity android:name=".activities.MainNavigation" />
     </application>
 
 </manifest>

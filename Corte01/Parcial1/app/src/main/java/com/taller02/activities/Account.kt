@@ -8,9 +8,7 @@ import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.taller02.MainActivity
 import com.taller02.R
-import com.taller02.activities.Splash.Companion.SPLASH_TIME_OUT
 import com.taller02.application.UserService
 import com.taller02.application.impl.SharedPreferencesUserService
 import java.util.Base64

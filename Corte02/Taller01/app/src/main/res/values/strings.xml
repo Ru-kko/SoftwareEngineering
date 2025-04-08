@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Taller02</string>
+    <string name="desc_logo">Logo</string>
+    <string name="author">Sebastian Vera</string>
+    <string name="home_act_msg">Inicia una nueva aventura con Taller02 y descubre una nueva forma de ver el mundo</string>
+    <string name="start_msg">Comenzar</string>
+    <string name="register_msg">Registrar</string>
+    <string name="account_icn_dec">account</string>
+    <string name="password_inc_desc">Password</string>
+    <string name="login_message">La aventura está por iniciar, por favor iniciar session</string>
+    <string name="login_msg">Ingresar</string>
+    <string name="forgot_password_msg">Recuperar Tu Contraseña</string>
+    <string name="google_login">Iniciar Con Google</string>
+    <string name="no_account_msg">No tiene cuenta?</string>
+    <string name="register_message">Ingrese su informacion de registro</string>
+    <string name="first_name_hint">Nombre</string>
+    <string name="last_name_hint">Apellido</string>
+    <string name="e_mail_hint">E-mail</string>
+    <string name="phone_hint">Telefono</string>
+    <string name="repeat_password_hint">Repeat Password</string>
+    <string name="conditions_hint">Acepto terminos y condiciones.</string>
+    <string name="recovery_msg">Te enviaremos un email para recuperrar tu contraseña</string>
+    <string name="recovery_hint">Recuperar</string>
+    <string name="edit_hint">Editar</string>
+</resources>

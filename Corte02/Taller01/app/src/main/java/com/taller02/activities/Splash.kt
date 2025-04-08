@@ -6,12 +6,13 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.taller02.MainActivity
 import com.taller02.R
 
 
 class Splash : AppCompatActivity() {
     companion object {
-        const val SPLASH_TIME_OUT = 1500L
+        const val SPLASH_TIME_OUT = 2000L
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
