@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_menu.xml"
-    app:startDestination="@id/account3">
+    app:startDestination="@id/home">
     <fragment
-        android:id="@+id/account3"
+        android:id="@+id/home"
+        android:name="com.taller02.fragments.Home"
+        android:label="First Fragment"
+        tools:layout="@layout/frag_home" >
+        <action
+            android:id="@+id/action_home_to_store"
+            app:destination="@id/store" />
+    </fragment>
+    <fragment
+        android:id="@+id/account"
         android:name="com.taller02.fragments.Account"
-        android:label="Account" />
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_account_to_editAccount"
+            app:destination="@id/editAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/store"
+        android:name="com.taller02.fragments.Store"
+        android:label="Store" >
+        <action
+            android:id="@+id/action_store_to_singleProduct"
+            app:destination="@id/singleProduct" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleProduct"
+        android:name="com.taller02.fragments.SingleProduct"
+        android:label="SingleProduct" />
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.taller02.fragments.Cart"
+        android:label="Cart" />
+    <fragment
+        android:id="@+id/editAccount"
+        android:name="com.taller02.fragments.EditAccount"
+        android:label="EditAccount" >
+        <action
+            android:id="@+id/action_editAccount_to_store"
+            app:destination="@id/store" />
+    </fragment>
+
 </navigation>

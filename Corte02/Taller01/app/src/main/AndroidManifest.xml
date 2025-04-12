@@ -25,7 +25,7 @@
         <activity android:name=".activities.LogIn" />
         <activity android:name=".activities.Register" />
         <activity android:name=".activities.PasswordRecovery" />
-        <activity android:name=".activities.MainNavigation" />
+        <activity android:name=".activities.SessionNavigation" />
     </application>
 
 </manifest>

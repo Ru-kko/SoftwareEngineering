@@ -12,7 +12,6 @@ import com.taller02.R
 import com.taller02.application.UserService
 import com.taller02.application.error.InvalidDataException
 import com.taller02.application.impl.SharedPreferencesUserService
-import com.taller02.fragments.Account
 
 class LogIn : AppCompatActivity() {
     private lateinit var userService: UserService
@@ -44,7 +43,7 @@ class LogIn : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            startActivity(Intent(this, MainNavigation::class.java))
+            startActivity(Intent(this, SessionNavigation::class.java))
         }
         register.setOnClickListener {
             startActivity(Intent(this, Register::class.java))

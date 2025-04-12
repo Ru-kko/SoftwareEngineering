@@ -20,14 +20,14 @@ class SharedPreferencesUserService(private val shp: SharedPreferences) : UserSer
         if (usr.firstName.trim().isEmpty())
             throw InvalidDataException("El nombre no debe estar vacio")
 
-        if (usr.firstName.trim().isEmpty())
+        if (usr.lastName.trim().isEmpty())
             throw InvalidDataException("El apellido no debe estar vacio")
 
         if (usr.password.trim().isEmpty())
             throw InvalidDataException("La contraseña no debe estar vacia")
 
         try {
-            usr.password.toLong()
+            usr.phone.toLong()
         } catch (_: NumberFormatException) {
             throw InvalidDataException("${usr.phone} no es un numero de telefono valido")
         }
@@ -44,6 +44,8 @@ class SharedPreferencesUserService(private val shp: SharedPreferences) : UserSer
         }
     }
 
+    override fun edit(usr: User) = this.saveUser(usr)
+
     override fun getUserInfo(): User {
         return User(
             firstName = shp.getString("firstName", "Jonh") as String,
@@ -57,7 +59,7 @@ class SharedPreferencesUserService(private val shp: SharedPreferences) : UserSer
     private fun saveUser(usr: User) {
         shp.edit()
             .putString("firstName", usr.firstName)
-            .putString("lastName", usr.firstName)
+            .putString("lastName", usr.lastName)
             .putString("email", usr.email)
             .putString("password", usr.password)
             .putString("phone", usr.phone)

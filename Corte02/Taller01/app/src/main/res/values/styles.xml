@@ -5,6 +5,7 @@
         <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
         <item name="android:background">@drawable/rounded</item>
     </style>
     <style name="Input.Rounded" parent="@android:style/Widget.EditText">
@@ -13,5 +14,8 @@
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="android:background">@drawable/rounded_white</item>
+    </style>
+    <style name="Spinner.dropdown.Item" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:background">@drawable/spinner_item</item>
     </style>
 </resources>

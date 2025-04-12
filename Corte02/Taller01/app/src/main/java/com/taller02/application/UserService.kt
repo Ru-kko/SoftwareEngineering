@@ -11,5 +11,9 @@ interface UserService {
     @Throws(InvalidDataException::class)
     fun login(email: String, password: String)
 
+
+    @Throws(InvalidDataException::class)
+    fun edit(usr: User)
+
     fun getUserInfo(): User
 }

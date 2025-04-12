@@ -45,7 +45,7 @@ class Register: AppCompatActivity() {
 
         findViewById<Button>(R.id.start_btn).setOnClickListener {
             if (!checkConditions.isChecked) {
-                Toast.makeText(this, "Debes aceptar terminos y condiciones", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Accept terms and conditions", Toast.LENGTH_SHORT).show()
             }
             try {
                 userService.register(buildUser())
@@ -53,7 +53,7 @@ class Register: AppCompatActivity() {
                 Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } catch (e: Exception) {
-                Toast.makeText(this, "Hubo un error en el sistema porfavor intentelo mas tarde", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "We are having problems, try again later", Toast.LENGTH_SHORT).show()
                 Log.e(Register::class.java.name, e.message, e)
                 return@setOnClickListener
             }
@@ -64,7 +64,7 @@ class Register: AppCompatActivity() {
 
     private fun buildUser(): User {
         if (passwordInp.text.toString() != passwordRepeatInp.text.toString()) {
-            throw InvalidDataException("La contraseña no coinside")
+            throw InvalidDataException("Password are not same")
         }
 
         return User(

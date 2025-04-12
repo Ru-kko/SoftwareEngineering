@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingTop="35dp"
+        android:paddingHorizontal="15dp"
+        android:background="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textFontWeight="900"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.taller02.componets.AccountIconImage
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-60dp"
+        android:src="@drawable/account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="30dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="@string/first_name_hint"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_first_name"
+                android:autofillHints="name"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="@string/first_name_hint"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:inputType="textPersonName" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="@string/last_name_hint"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="20sp" />
+            <EditText
+                android:autofillHints="name"
+                android:id="@+id/edit_last_name"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="@string/last_name_hint"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:inputType="textPersonName" />
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:layout_marginVertical="20dp"
+            android:background="@color/pink" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="@string/e_mail_hint"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_email"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="@string/e_mail_hint"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:autofillHints="emailAddress"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="@string/password_inc_desc"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_password"
+                android:autofillHints="password"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="@string/password_inc_desc"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="18sp"
+                android:inputType="textPassword" />
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:layout_marginVertical="20dp"
+            android:background="@color/pink" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:fontFamily="serif"
+                android:gravity="start"
+                android:text="@string/phone_hint"
+                android:textColor="@color/black"
+                android:textFontWeight="900"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_phone"
+                android:autofillHints="phone"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="@string/phone_hint"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:inputType="phone" />
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:layout_marginVertical="20dp"
+            android:background="@color/pink" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_hint"
+            style="@style/Button.Orange" />
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
