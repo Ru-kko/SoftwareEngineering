@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_menu.xml"
-    app:startDestination="@id/splash">
-
-    <activity
-        android:id="@+id/splash"
-        android:name="com.taller02.activities.Splash"
-        android:label="Splash" />
+    android:id="@+id/nav_menu"
+    app:startDestination="@id/account">
+    <fragment
+        android:id="@+id/account"
+        android:name="com.taller02.fragments.Account"
+        android:label="Account" >
+    </fragment>
+    <fragment
+        android:id="@+id/creditCapacity"
+        android:name="com.taller02.fragments.CreditCapacity"
+        android:label="CreditCapacity" />
 </navigation>

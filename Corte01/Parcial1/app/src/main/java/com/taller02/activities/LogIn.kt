@@ -43,7 +43,7 @@ class LogIn : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            startActivity(Intent(this, Account::class.java))
+            startActivity(Intent(this, MainNavigation::class.java))
         }
         register.setOnClickListener {
             startActivity(Intent(this, Register::class.java))
